@@ -1,0 +1,182 @@
+/*Global*/
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+h1{
+    font-size: 300%;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url("img/fundo.jpg"); 
+    background-size: cover;
+    margin: 0;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+
+/*Classes Cartas do jogo*/
+
+.row{
+    display: table-row;
+}
+
+.coluna{
+    width: 120px;
+    height: 70vh;
+    padding:0 10px 10px 10px;
+    border: 1px transparent;
+    position: relative;
+}
+
+.card{
+    width: 10rem;
+    height: 14rem;
+    margin-top: 0;
+    background: url("img/textura.jpg"); 
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    position: absolute; 
+    transition: all;
+    transition-duration: .8s;
+    box-shadow: 0 0 0 0 transparent;
+    
+}
+.card::before{
+    content: "";
+    width: 90%;
+    height: 90%;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 2.5%;
+}
+
+
+.card:nth-child(1) {
+    z-index: 1;
+}
+
+.card:nth-child(2) {
+    top: 30px;
+    z-index: 2;
+}
+.card:nth-child(3) {
+    top: 60px;
+    z-index: 3;
+}
+.card:nth-child(4) {
+    top: 90px;
+    z-index: 4;
+}
+.card:nth-child(5) {
+    top: 120px;
+    z-index: 5;
+}
+
+
+.card:last-child{
+    background: url("img/frente.jpg");
+    background-size: cover;
+}
+
+.card:hover{
+    margin-top: 5px;
+    box-shadow: 0 2px 3px 1px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+/*Classes- cartas do resto*/
+.resto{
+    width: 120px;
+    height: 80vh;
+    padding:0 10px 10px 10px;
+    border: 1px transparent;
+    position: relative;
+    left: 100%;
+}
+
+.sobra{
+    width: 14rem;
+    height: 10rem;
+    margin-top: 0;
+    background: url("img/horizontal.jpg"); 
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    position: absolute; 
+    transition: all;
+    transition-duration: .2s;
+    box-shadow: 0 0 0 0 transparent;
+}
+
+.sobra::before{
+    content: "";
+    width: 90%;
+    height: 90%;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 2.5%;
+}
+
+
+.sobra:nth-child(1) {
+   bottom: 0;
+   z-index: 1;
+}
+
+.sobra:nth-child(2) {
+    bottom: 30px;
+    z-index: 2;
+}
+.sobra:nth-child(3) {
+    bottom: 60px;
+    z-index: 3;
+}
+.sobra:nth-child(4) {
+    bottom: 90px;
+    z-index: 4;
+}
+.sobra:nth-child(5) {
+    bottom: 120px;
+    z-index: 5;
+}
+
+.sobra:hover{
+    margin-top: 5px;
+    box-shadow: 0 2px 3px 1px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+/* Placar*/
+.container{
+    height:150px ;
+    width: 250px;
+    margin: 0 auto;
+    background-color: rgb(10, 70, 20);
+    position: absolute;
+    left: calc(50% - 50px);
+}
+
+
+
+
+
